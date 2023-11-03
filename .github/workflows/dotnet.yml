@@ -25,6 +25,6 @@ jobs:
     - name: Build
       run: dotnet build eGathering.sln --no-restore
     - name: Archtecture-test
-      run: 
+      run: |
           cd ./eGathering.ArchitectureTest
           dotnet test --no-build
