@@ -6,7 +6,7 @@ internal static class ApplyMiddlewareHelper
 {
     public static IApplicationBuilder UseExceptionMiddleware(this IApplicationBuilder app)
     {
-        app.UseMiddleware<ExceptionsMiddleware>();
+        app.UseMiddleware<ExceptionsFactoryMiddleware>();
         return app;
     }
 }
