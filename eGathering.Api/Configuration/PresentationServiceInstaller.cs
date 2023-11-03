@@ -1,4 +1,6 @@
-﻿namespace eGathering.Api.Configuration;
+﻿using eGathering.Api.Middlewares;
+
+namespace eGathering.Api.Configuration;
 
 public class PresentationServiceInstaller : IServiceInstaller
 {
@@ -8,5 +10,8 @@ public class PresentationServiceInstaller : IServiceInstaller
             .AddEndpointsApiExplorer()
             .AddSwaggerGen()
             .AddControllers();
+
+        services
+            .AddTransient<ExceptionsFactoryMiddleware>();
     }
 }
