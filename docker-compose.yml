@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  egathering.api:
+    image: ${DOCKER_REGISTRY-}egatheringapi
+    build:
+      context: .
+      dockerfile: eGathering.Api/Dockerfile
